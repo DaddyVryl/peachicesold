@@ -1,0 +1,675 @@
+/* Peach Ice CSS Made by Vryl */
+/* If you are here, fucking leave you gronk */
+/* THIS CODE IS TO NOT BE REUSED IN ANY WAY WITHOUT PERMISSION, DM ME ON DISCORD IF YOU'D LIKE TO REUSE THE CODE. Vryl#1526 */
+/* DRE IS THE ONLY PERSON THAT SHOULD BE REUSING ANY OF THIS CODE, IF YOU AINT ME OR DRE GET THE FUCK OUT OF THIS FILE */
+:root{
+    --yellow: #fbc02d;
+    --blue: #2196F3;
+    --green: #b2f252;
+    --red: #ed4242
+}
+
+@font-face {
+    font-family:gamefont;
+    src:url(https://raw.githubusercontent.com/fortifyve/fkanit/main/Kalam-Bold.woff2);
+}
+
+/* REMOVAL */
+#mainLogo, #clientExit, #aMerger, #newsHolder, #youNewDiv, #onetrust-consent-sdk, .weapKey, #aHolder, .imageButton, #editorBtnM, 
+.headerBarRight .verticalSeparator, #seasonLabel, .krSocial, #voiceDisplay, #bubbleContainer, #claimPop, #popupBack, #headerRight,
+.endAHolder, #mapInfoHolder :not(:last-child), #curGameInfo, #merchImg, #igXPBar, #supportKrunker, #supportMapCreator, #endAContainer, #termsInfo,
+.endAHolder, #timerIcon, .imageButton, #uiBase.onMenu #voiceDisplay, #aContainer, #tlInfHold, #loadEditrBtn, #rankedSoonTm, #menuWindow::-webkit-scrollbar, #chatList::-webkit-scrollbar, 
+.button.small.buttonO img, .settingsBtn[onclick="openOneTrust()"],#ammoIcon, #chatSwitchHolder, .menuSocialB, #hudClassIcon, .menBtnIcn, #maxHP, #killsIcon, #deathsIcon, #streakIcon, #challIcon{
+    display: none!important;
+}
+
+.UIB, .leftUIB, #healthValueHolder, .countIcon {
+    background-color: transparent!Important    
+}
+
+/* REMOVAL BUTTON COLOUR */
+.button,
+.button:hover{
+	border: hidden!important
+}
+
+.setSugBox{
+    display: none    
+}
+
+/* ANIMATIONS AND DETAILS */
+* {
+    cursor: url(https://cdn.discordapp.com/attachments/883626676343418901/901723280065581138/cursorvryl.png), auto!important;
+}
+
+#timerDisplay {
+	position: fixed;
+	background-color: transparent !important;
+	margin-top: -0.7%;
+    left: 50%;
+	transform: translateX(-50%);
+	filter: drop-shadow(0px 0px 10px #ff7363);
+}
+
+#instructionHolder {
+    backdrop-filter: blur(5px);
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#classPreviewCanvas {
+    filter: drop-shadow(0px 0px 10px #ff7363);
+}
+
+#startServBtn[style] {
+    visibility: hidden;
+}
+
+#startServBtn[style]::before {
+    visibility: visible;
+    content: 'Start Game';
+    position: absolute;
+    width: 22.35%;
+    height: 75px;
+    TOP: 0;
+    background: #ff7363;
+    right: 0;
+    line-height: 75px
+}
+
+#policeButton {
+    background-color: #ff7363;
+    filter: drop-shadow(5px 0 0 #fff) drop-shadow(-5px 0 0 #fff) drop-shadow(0 5px 0 #fff) drop-shadow(0 -5px 0 #fff);
+}
+
+#customizeButton {
+    background-color: rgb(255 115 99);
+    filter: drop-shadow(5px 0 0 #fff) drop-shadow(-5px 0 0 #fff) drop-shadow(0 5px 0 #fff) drop-shadow(0 -5px 0 #fff);
+}
+
+#menuClassSubtext {
+    color: #ff7363;
+}
+
+.menuClassLevelBox {
+    background-color: transparent;
+    color: #ff7363 !important;
+    filter: drop-shadow(0.25px 0 0 #000) drop-shadow(-0.25px 0 0 #000) drop-shadow(0 0.25px 0 #000) drop-shadow(0 -0.25px 0 #000);
+}
+
+.menuClassPlayerName{
+    filter: drop-shadow(0.25px 0 0 #000) drop-shadow(-0.25px 0 0 #000) drop-shadow(0 0.25px 0 #000) drop-shadow(0 -0.25px 0 #000);
+}
+
+.menuClassPlayerClan {
+    color: #ff7363 !important;
+    filter: drop-shadow(0.25px 0 0 #000) drop-shadow(-0.25px 0 0 #000) drop-shadow(0 0.25px 0 #000) drop-shadow(0 -0.25px 0 #000);
+}
+
+
+/* AMMO */
+#ammoDisplay {
+    position: fixed;
+    background-color: transparent;
+    background-image: url(https://cdn.discordapp.com/attachments/876671788405370892/900982731893272576/reloadbar.png);
+    transform: none;
+    width: 50px;
+    height: 4px;
+    top: calc(50% + 35px);
+    left: calc(50% - 25px);
+    padding: 0;
+    padding-top: 0;
+    padding-left: 0;
+    border-radius: 60px;
+}
+
+#ammoDisplay {
+    width: 50px;
+    height: 5px;
+    top: calc(50% + 35px);
+    left: calc(50% - 25px);
+}
+
+#ammoVal {
+    position: fixed;
+    font-size: 50px;
+    right: 35px;
+    bottom: 12.5px;
+    color: #ff7363 !important ;
+    filter: drop-shadow(2px 2px #ffffff) drop-shadow(-2px -2px #ffffff) drop-shadow(-2px 2px #ffffff) drop-shadow(2px -2px #ffffff) !important ;
+}
+
+#ammoMax {
+    display: none;
+}
+
+/* RELOAD */
+#reloadMsg {
+    bottom:calc(50% - 200px);
+    background-image:none;
+    color:#ff7363;
+    font-family:Material Icons;
+    font-size:0;
+    border:none;
+    background-color:transparent !important;
+    animation: fade .4s infinite alternate;
+}
+
+#reloadMsg:before {
+    content:"report_problem";
+    font-size:64px;
+}
+
+/* HEALTH */
+#healthBar {
+    width: 332.5px;
+    height: 16px;
+    display: inline-flex;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.4) !important ;
+    border-radius: 10px !important ;
+    position: fixed;
+    left: 18px;
+    bottom: 49.5px;
+    border: 6px solid #ffffff !important ;
+}
+
+.healthBarSeg {
+    width: -webkit-fill-available;
+    margin: 0 -1px;
+    border-radius: 0;
+    background-color: transparent !important ;
+}
+
+.hpBSeg {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.hpBSeg {
+    background-color: #ff7363 !important;
+}
+
+#healthValueHolder {
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    left: 420px;
+    bottom: 13px;
+    background-color: transparent !important ;
+}
+
+#healthValue {
+    color: #ff7363 !important ;
+    font-size: 50px;
+    filter: drop-shadow(2px 2px #ffffff) drop-shadow(-2px -2px #ffffff) drop-shadow(-2px 2px #ffffff) drop-shadow(2px -2px #ffffff) !important ;
+} 
+
+/* LOADER */
+#loadInfoLHolder, #loadInfoRHolder {
+    display: none;
+}
+
+#initLoader {
+    background-image: url('https://cdn.discordapp.com/attachments/876671788405370892/902195799188987904/BackgroundV1.png') !important;
+    background-size: cover;
+    background-repeat: yes-repeat;
+    background-position: center;
+    pointer-events: all;
+}
+
+.lds-ring {
+    display: none;
+}
+
+.lds-ring > div {
+    display: none;
+}
+
+div#loadTipsHolder {
+    font-size: 0;
+}
+
+#loadTipsHolder:before {
+    content: "Don't stop until you reach the moon.";
+    color: #141414;
+    font-size: 32px;
+}
+
+#loadHeader {
+    display: none;
+}
+
+#loadEditrBtn {
+    display: none;
+}
+
+#loadTipsHolder > span {
+    display: none;
+}
+
+#lC-cont {
+    display: none;
+}
+
+#loadGamNm {
+    display: none;
+}
+
+/*WEAPON DISPLAY*/
+#weapDisplay {
+    //display: block;
+	//margin-bottom: -3.4%;
+	//margin-right: 46%;
+}
+
+.weapIcon {
+    position:fixed;
+    left:50%;
+    bottom:16px;
+    opacity: 0 !important;
+    transform:translateX(-50%) translateY(100px);
+    transition-duration: 0.5s;
+    height: 0px;
+    width: 160px;
+    filter: drop-shadow(0px 0px 10px #ff7363);
+}
+
+.weapIcon[style*="opacity: 1"] {
+    opacity:1 !important;
+    transform:translateX(-50%) translateY(0);
+}
+
+.weapIcon[style*="1"] {
+    opacity: 1 !important;
+    height: 80px;
+}
+
+#weapIconMel {
+    margin: 0 !important;
+}
+
+.weapItem {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* CLICK TO PLAY */
+#instructions {
+    visibility: hidden;
+    font-size: 0px;
+    animation: none;
+}
+
+#instructions:after {
+    visibility: visible;
+    font-size: 32px;
+    content: 'ピーチアイス';
+    color:rgb(255 115 99);
+    animation: grow .8s infinite alternate
+}
+
+
+/* CHAT */
+#uiBase.onMenu #chatHolder {
+    position: fixed;
+    left: unset!important;
+    bottom: 30px!important; 
+    right: 10px;
+}
+
+#chatHolder {
+    bottom: 145px !important;
+    transition: 0s;
+    left: 20px;
+}
+
+#chatList{
+    border-radius: 10px;
+    background: #0000002e;
+}
+
+#chatInputHolder{
+    background: transparent;
+    border: hidden!important;
+    padding: 0!Important;
+    width: 100.4%;
+    margin-left: -5px;
+    margin-bottom: 18px;
+    height: 0;
+}
+
+#chatInputHolder::before{
+    content: "Start Malding";
+    font-size: 18px;
+    position: absolute;
+    color: #fff;
+    transform: translateY(6.5px);
+    left: 13px;
+    opacity: 0.5;
+    cursor: text;
+    pointer-events: none;
+}
+
+#chatInput::placeholder{
+    color: transparent;
+}
+
+#chatInput {
+	background: #0000002e;
+	border: hidden;
+	transition-duration: 0ms;
+    opacity: 1;
+    width: 100%!important;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.chatItem[style] {
+    color: #fff !important;
+    font-size: 15px;
+    width: -webkit-fill-available;
+    margin: 0;
+    padding: 5px 5px 2px 10px;
+    border-radius: 0;
+}
+
+.chatItem {
+    border-radius: 0;
+    margin-right: 0px;
+    text-align: center;
+    background: transparent!Important
+}
+
+#chatHolder:focus-within #chatInputHolder::before{
+    opacity: 0;
+}
+
+/* MENU CURVE THANK YOU DRE BBG <3*/
+#subLogoButtons {
+    z-index: 1;
+}
+
+.buttonD {
+    filter: grayscale(0);
+}
+
+#subLogoButtons>.button:hover {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+#subLogoButtons::before {
+    content: '';
+    width: 1000px;
+    height: 1000px;
+    background-image: url(https://cdn.discordapp.com/attachments/879704923435040771/901156332068040715/archvryl.png);
+    background-repeat: no-repeat;
+    background-size: 800px;
+    position: absolute;
+    left: -96px;
+    top: -185px;
+    filter: drop-shadow(5px 0 0 #fff) drop-shadow(-5px 0 0 #fff) drop-shadow(0 5px 0 #fff) drop-shadow(0 -5px 0 #fff);
+}
+
+#menuBtnHost, #menuBtnHost.button:hover {
+    transform: rotate(-3deg);
+}
+
+#subLogoButtons>.button {
+    background-color: rgb(255 115 99);
+}
+
+#menuBtnBrowser, #menuBtnBrowser.button:hover {
+    transform: translateY(-6.3px) rotate(-1.6deg);
+}
+
+#menuBtnJoin, #menuBtnJoin.button:hover {
+    transform: rotate(3.3deg) translateY(-1px);
+}
+
+#inviteButton, #inviteButton.button:hover {
+    transform: rotate(2deg) translateY(-5.7px);
+}
+
+#menuBtnRanked, #menuBtnRanked.button:hover {
+    transform: rotate(0.3deg) translateY(-7.9px);
+}
+
+#menuBtnHost:after, #menuBtnBrowser:after, #menuBtnRanked:after, #inviteButton:after, #menuBtnJoin:after {
+    font-size: 24px;
+}
+
+#menuBtnHost, #menuBtnBrowser, #menuBtnRanked, #inviteButton, #menuBtnJoin {
+    font-size: 0px !important;
+}
+
+#menuBtnHost:after {
+    content: 'Host';
+}
+
+#menuBtnBrowser:after {
+    content: 'Browser';
+}
+
+#menuBtnRanked:after {
+    content: 'Ranked'
+}
+
+#inviteButton:after {
+    content: 'Invite'
+}
+
+#menuBtnJoin:after {
+    content: 'Join'
+}
+
+/* MENU UI / SETTINGS */
+#classPreviewCanvas {
+    filter: drop-shadow(0px 0px 10px #ff7363) drop-shadow(0px 0px 10px #ff7363);
+}
+
+#windowHolder {
+    content: " ";
+    background-color: transparent !important;
+    position: fixed;
+    display: block !important;
+    right: 0px;
+    top: -890px;
+    transition: 1.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+    opacity: 1;
+}
+
+#windowHolder[style*="display: block;"] {
+    position: fixed;
+    content: " ";
+    animation: menuWindow 0.5s;
+    opacity: 1;
+    top: 10px;
+}
+
+#windowHolder[style*="display: none;"] {
+    height: 0%;
+}
+
+#menuWindow {
+    border-radius: 30px;
+    border: 5px solid #ff7363
+}
+
+a, a:active, a:visited {
+    color: #ff7363;
+}
+
+input:checked+.slider, input:focus+.slider, .settingsBtn, .clsXPBarC, .joinBtn, #hostMenuBtn {
+    background-color: #ff7363;
+}
+
+.quickJoin {
+    border: 4px solid #ff7363;
+}
+
+input[type=color] {
+    border: 4px solid #ff7363;
+}
+
+/* SIDE MENU UI */
+#menuBtnProfile:after, #menuBtnShop:after, #menuBtnChall:after, #menuBtnSocial:after, #menuBtnMaps:after, #menuBtnMods:after, #menuBtnSettings:after {
+    font-size: 24px;
+}
+
+.menuItem{
+    width: 225px
+}
+
+.menuItemTitle{
+    position: relative;
+}
+
+.menuItem:nth-child(1) .menuItemTitle,
+.menuItem:nth-child(7) .menuItemTitle{
+    left: -30px
+}
+
+.menuItem:nth-child(2) .menuItemTitle,
+.menuItem:nth-child(6) .menuItemTitle{
+    left: -24px
+}
+
+.menuItem:nth-child(3) .menuItemTitle,
+.menuItem:nth-child(5) .menuItemTitle{
+    left: -20px
+}
+
+.menuItem:nth-child(4) .menuItemTitle{
+    left: -18px
+}
+
+.menuItemTitle{
+    font-size: 29px!important
+}
+
+#menuBtnShop,
+#menuBtnProfile{
+    font-size: 0!important
+}
+
+#menuBtnShop::after,
+#menuBtnProfile::after{
+    content: 'Shop';
+    font-size: 29px
+}
+
+#menuBtnProfile::after{
+    content: 'Profile'
+}
+
+#signedInHeaderBar, signedOutHeaderBar {
+    background-color:#ff7363;
+    filter: drop-shadow(5px 0 0 #fff) drop-shadow(-5px 0 0 #fff) drop-shadow(0 5px 0 #fff) drop-shadow(0 -5px 0 #fff);
+}
+
+#mLevelCont {
+    background-color: transparent;
+}
+
+#menuItemContainer::before {
+    content: '';
+    position: fixed;
+    bottom: -70px;
+    left: -612.5px;
+    width: 1500px;
+    height: 1500px;
+    background-image: url(https://cdn.discordapp.com/attachments/879704923435040771/901156332068040715/archvryl.png);
+    background-repeat: no-repeat;
+    background-size: 1500px;
+    background-position: center;
+    filter: drop-shadow(5px 0 0 #fff) drop-shadow(-5px 0 0 #fff) drop-shadow(0 5px 0 #fff) drop-shadow(0 -5px 0 #fff);
+    transform: rotate(90deg);
+    pointer-events: none;
+    z-index: -999
+}
+
+#menuBtnProfile {
+    transform: rotate(0deg) translateX(50px) translateY(30px);
+    z-index: 1;
+}
+
+#menuBtnShop {
+    transform: rotate(0deg) translateX(55px) translateY(10px);
+    z-index: 1;
+}
+
+#menuBtnChall {
+    transform: rotate(0deg) translateX(55px);
+    z-index: 1;
+}
+
+#menuBtnMaps {
+    transform: rotate(0deg) translateX(60px);
+}
+
+#menuBtnMods {
+    transform: rotate(0deg) translateX(55px);
+}
+
+#menuBtnSettings {
+    transform: rotate(0deg) translateX(50px);
+}
+
+#menuBtnSocial {
+    transform: rotate(0deg) translateX(60px) translateY(10px);
+}
+
+#menuItemContainer {
+    background-color: transparent;
+}
+
+/* SCOREBOARD */
+#killsVal:after {
+    content: 'Kills';
+    display: block;
+    font-size: 18px;
+    text-align: center
+}
+#deathsVal:after {
+    content: 'Deaths';
+    display: block;
+    font-size: 18px;
+    text-align: center
+}
+#streakVal:after {
+    content: 'Streak';
+    display: block;
+    font-size: 18px;
+    text-align: center
+}
+
+#leaderDisplay::before {
+    content: "Leaderboard";
+    display: flex;
+    font-size: 22px;
+    color: #ffffff;
+    border-bottom: 4px solid #ff7363;
+    border-image-slice: 1;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 4px;
+    padding-left: calc(50% - 62.5px);
+}
+
+.leaderNameM span {
+    color:#ff7363 !important;
+}
+
+#spectButton:before {
+    
+}
